@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Stack Dev Course – Jvappempire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-in-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+
+    <!-- Hero Section -->
+    <section
+        class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-gray-800 to-black">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4 animate-pulse">Become a Full Stack Developer in
+            Less Than 90 Days</h1>
+        <p class="text-xl text-red-300 max-w-xl mb-6">Master HTML, CSS, JavaScript, Tailwind CSS, React & Django while
+            building real-world projects.</p>
+        <a href="https://paystack.com/pay/eqhshv9lla"
+            class="bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg">
+            Pre-Order Now – Save 90%
+        </a>
+        <img src="image (3).jpg" alt="coding" class="mt-10 rounded-xl shadow-lg max-w-full w-96">
+    </section>
+
+    <!-- Course Outline -->
+    <section class="py-16 px-6 md:px-20 bg-gray-800">
+        <h2 class="text-3xl font-bold mb-8 text-center fade-in">What You'll Learn</h2>
+        <div class="grid md:grid-cols-2 gap-8 fade-in">
+            <ul class="space-y-4 list-disc list-inside">
+                <li>HTML & Semantic Markup</li>
+                <li>CSS & Responsive Design</li>
+                <li>Tailwind CSS for fast styling</li>
+                <li>JavaScript Fundamentals</li>
+                <li>React (Components, State, Hooks)</li>
+                <li>Django for Backend APIs</li>
+                <li>Connecting Frontend & Backend</li>
+                <li>Deployment & Hosting</li>
+            </ul>
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+                alt="course-outline" class="rounded-lg shadow-lg w-full">
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-16 px-6 md:px-20 bg-gray-900">
+        <h2 class="text-3xl font-bold mb-8 text-center fade-in">Projects You'll Build</h2>
+        <div class="grid md:grid-cols-2 gap-8 fade-in">
+            <ul class="space-y-4 list-decimal list-inside">
+                <li>Personal Portfolio Website</li>
+                <li>Interactive Blog Platform</li>
+                <li>To-do List App with Authentication</li>
+                <li>E-Commerce Store with Cart</li>
+                <li>Real-time Chat App</li>
+                <li>Job Board with Admin Dashboard</li>
+            </ul>
+            <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=800&q=80"
+                alt="projects" class="rounded-lg shadow-lg w-full">
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 px-6 md:px-20 bg-gray-800">
+        <h2 class="text-3xl font-bold text-center mb-8 fade-in">What Our Students Say</h2>
+        <div class="grid md:grid-cols-3 gap-8 fade-in">
+            <div class="bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition-transform">
+                <p>"I landed my first remote job in just 2 months after taking this course. Thank you, Jvappempire!"</p>
+                <div class="mt-4 text-yellow-400">★★★★★</div>
+                <p class="mt-2 font-semibold">— Sarah J.</p>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition-transform">
+                <p>"The projects were practical and real. I built my own portfolio and employers loved it."</p>
+                <div class="mt-4 text-yellow-400">★★★★★</div>
+                <p class="mt-2 font-semibold">— Michael T.</p>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-lg shadow hover:scale-105 transition-transform">
+                <p>"This course transformed my confidence in tech. The support was amazing too!"</p>
+                <div class="mt-4 text-yellow-400">★★★★★</div>
+                <p class="mt-2 font-semibold">— Anita E.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Again -->
+    <section class="py-12 px-6 md:px-20 bg-gradient-to-r from-blue-800 to-indigo-900 text-center">
+        <h2 class="text-3xl font-bold mb-4 fade-in">Ready to Build Real Skills?</h2>
+        <p class="mb-6 text-lg text-gray-300 fade-in">Pre-order now and save 90%. Limited slots available.</p>
+        <a href="https://paystack.com/pay/eqhshv9lla"
+            class="bg-yellow-500 hover:bg-yellow-600 transition-all duration-300 text-gray-900 px-8 py-3 rounded-full text-lg font-bold shadow-xl fade-in">
+            Enroll Now <strike>#300,000 </strike> #30,000</a>
+    </section>
+
+    <script>
+        // Scroll animation
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        fadeEls.forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
